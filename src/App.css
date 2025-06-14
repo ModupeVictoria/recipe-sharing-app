@@ -1,0 +1,111 @@
+body {
+  height: 100%;
+}
+
+.slideInUp {
+  animation: slideInUp 0.6s ease-out;
+}
+
+@keyframes slideInUp {
+  from {
+      transform: translate3d(0, 100%, 0);
+      visibility: visible;
+  }
+  to {
+      transform: translate3d(0, 0, 0);
+  }
+}
+
+/* @media (min-width: 640px) {
+  table {
+    display: inline-table !important;
+  }
+
+  thead tr:not(:first-child) {
+    display: none;
+  }
+}
+
+td:not(:last-child) {
+  border-bottom: 0;
+}
+
+th:not(:last-child) {
+  border-bottom: 2px solid rgba(0, 0, 0, .1);
+} */
+.radio-container {
+  display: flex;
+  align-items: center;
+  /* margin-bottom: 10px; */
+  /* max-width: 600px; */
+  /* width: 100%; */
+}
+
+.radio-container input[type="radio"] {
+  display: none;
+}
+
+.radio-container input[type="radio"] + label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Adjust width as needed */
+  height: 50px; /* Adjust height as needed */
+  line-height: 40px;
+  /* max-width: 600px; */
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.radio-container input[type="radio"]:checked + label {
+  background-color: #00B07B;
+  color: #fff;
+}
+/* App.css */
+
+.image-container {
+  position: relative;
+  width: 250px;
+  height: 150px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  /* overflow: hidden; */
+}
+
+.image {
+  width: 100px;
+  height: 100px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.plane {
+  transform: translateX(0);
+}
+
+.house {
+  transform: translateX(300px);
+}
+
+.image-container:hover .plane {
+  transform: translateX(200px);
+}
+
+.image-container:hover .house {
+  transform: translateX(-150px);
+  transform: translateY(70px);
+}
+
+@keyframes slowSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate-slowSpin {
+  animation: slowSpin 2s linear infinite; /* Slows the animation down */
+}

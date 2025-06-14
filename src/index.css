@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+  html{
+    @apply scroll-smooth
+  }
+}
+body{
+  font-family: 'Poppins', sans-serif;
+}
+
+#gallary{
+  background-color: #1DB459;
+  animation: fader 10s linear infinite;
+}
+
+
+
+.fade-in {
+  transition: opacity 1.5s ease;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+@keyframes spinner { 
+  0% { 
+    transform: translate3d(-50%, -50%, 0) rotate(0deg); 
+  } 
+  100% { 
+    transform: translate3d(-50%, -50%, 0) rotate(360deg); 
+  }
+}
+.spin::before { animation: 1.5s linear infinite spinner; animation-play-state: inherit; border: solid 5px #cfd0d1;
+ border-bottom-color: #1c87c9; border-radius: 50%; content: ''; height: 40px; width: 40px; position: absolute;
+ top: 50%; left: 50%; transform: translate3d(-50%, -50%, 0); will-change: transform;}
+iframe {height: 100vh !important; width: 100%;}
+
+#service-header {
+  /* background-color: #FAFAFB; */
+  position: absolute;
+  width: 100%;
+
+
+}
+#service-header .pro-sidebar {
+  height: 100vh;
+}
+#service-header .closemenu {
+  color: rgb(255, 254, 254);
+  position: absolute;
+  right: 0;
+  z-index: 9999;
+  line-height: 20px;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 22px;
+  top: 55px;
+  cursor: pointer;
+}
+#service-header .pro-sidebar {
+  width: 433px;
+  height: 100vh;
+  min-width: 20%;
+}
+
+#service-header .pro-sidebar.collapsed {
+  width: 0;
+  height: 100vh;
+  min-width: 0;
+}
+#service-header .pro-sidebar-inner {
+  background-color: #F9F9F9;
+  box-shadow: 0.5px 0.866px 2px 0px rgba(0, 0, 0, 0.15);
+}
+#service-header .pro-sidebar-inner .pro-sidebar-layout {
+  overflowx: hidden;
+}
+#service-header .pro-sidebar-inner .pro-sidebar-layout .logotext p {
+  font-size: 20px;
+  padding: 0 0px;
+  color: #000;
+  font-weight: bold;
+}
+#service-header .pro-sidebar-inner .pro-sidebar-layout ul {
+  padding: 0 5px;
+}
+#headservice-headerer .pro-sidebar-inner .pro-sidebar-layout ul .pro-inner-item {
+  color: #000;
+  margin: 0px 0px;
+  font-weight: bold;
+}
+#service-header .pro-sidebar-inner .pro-sidebar-layout ul .pro-inner-item .pro-icon-wrapper {
+  background-color: #fafafa;
+  color: #000;
+  border-radius: 3px;
+}
+#service-header .pro-sidebar-inner .pro-sidebar-layout ul .pro-inner-item .pro-icon-wrapper .pro-item-content {
+  color: #000;
+}
+#service-header .pro-sidebar-inner .pro-sidebar-layout .active {
+  background-image: linear-gradient(0deg, #a5913a00 0%, #ffe07200 100%);
+}
+#service-header .logo {
+  padding: 20px;
+}
+
+
+
+
