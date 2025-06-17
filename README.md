@@ -26,12 +26,12 @@ A community-driven recipe sharing platform built with React. Share your favorite
 
 2. Install dependencies
    ```bash
-   npm install
+   yarn install
    ```
 
 3. Start the development server
    ```bash
-   npm start
+   yarn start
    ```
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser
